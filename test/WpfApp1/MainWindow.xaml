@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="281" Width="362">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Label Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+        <TextBox TextWrapping="Wrap" x:Name="Login" Text="TableName" Width="100" Height="20" Grid.Row="0" Grid.Column="1" />
+        <Label Content="Password" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+        <TextBox TextWrapping="Wrap" x:Name="Password" Text="Password" Width="100" Height="20" Grid.Row="1" Grid.Column="1" />
+        <Button Content="Connect" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="3" Click="hConnect"/>
+        <Button x:Name="getTableRows"  Content="Get table" Width="100" Height="20" Grid.Row="2" Grid.Column="3" Click="hGetTableRows" IsEnabled="False"/>
+        <ComboBox x:Name="listTables" Width="120" Height="20" Grid.Row="3" Grid.Column="1"  SelectedIndex="0" Initialized="listTables_Initialized" SelectionChanged="listTables_SelectionChanged"/>
+        <Label Content="Table" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" />
+    </Grid>
+</Window>
