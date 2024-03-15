@@ -78,7 +78,6 @@ namespace WpfApp1
                         for (int i = 0; i < columnCount; i++)
                         {
                             command.Parameters.AddWithValue("@CI" + i, dataRow[i]);
-                            command.Parameters.AddWithValue("@CU" + i, dataRow[i]);
                         }
                         command.ExecuteNonQuery();
                         MessageBox.Show("row updated");
